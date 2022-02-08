@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import PokemonPage from './PokemonPage';
+import PokemonDetail from './PokemonDetail';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            {/*This links back to home page, should list all pokemon*/}
+            <PokemonPage />
+          </Route>
+          <Route exact path="/pokemon/:id">
+            {/*This points to a particular pokemon by id and render that specific pokemonDetail page*/}
+            <PokemonDetail />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+    
   );
 }
 
