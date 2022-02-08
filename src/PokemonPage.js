@@ -20,7 +20,18 @@ function App() {
   }, [page]);
 
   return (
-    
-  )
-
+    <>
+      <h3>Current Page: {page}</h3>
+      <div className='buttons'>
+        <button 
+          onClick={() => setPage(page - 1)}
+          disabled={page === 1}>Previous Page</button>
+        <button 
+          onClick={() => setPage(page + 1)}
+          disabled={pokemonArray.length < perPage}>Next Page</button>
+      </div>
+      <PokemonList pokemonArray={pokemonArray} />
+    </>
+  );
 }
+export default App;
