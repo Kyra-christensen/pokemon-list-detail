@@ -4,6 +4,8 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import PokemonPage from './PokemonPage';
+import PokemonDetail from './PokemonDetail';
 
 
 function App() {
@@ -11,13 +13,13 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route>
+          <Route exact path="/">
             {/*This links back to home page, should list all pokemon*/}
-
+            <PokemonPage />
           </Route>
-          <Route>
+          <Route exact path="/pokemon/:id">
             {/*This points to a particular pokemon by id and render that specific pokemonDetail page*/}
-            
+            <PokemonDetail />
           </Route>
         </Switch>
       </div>
