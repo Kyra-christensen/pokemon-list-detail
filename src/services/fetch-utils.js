@@ -1,6 +1,6 @@
 import { client, checkError } from './client';
 
-export async function getPokemon(from = 0, to = 101) {
+export async function getPokemon(from = 0, to = 30) {
   const response = await client
     .from ('pokemon-list')
     .select()

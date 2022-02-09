@@ -11,12 +11,14 @@ function App() {
   useEffect(() => {
     async function fetch() {
       const from = page * perPage - perPage;
-      const to = page * perPage;
+      const to = page * perPage - 1;
       const pokemon = await getPokemon(from, to);
 
       setPokemonArray(pokemon);
     }
+
     fetch();
+
   }, [page]);
 
   return (
