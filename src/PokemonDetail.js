@@ -16,5 +16,9 @@ export default function PokemonDetail() {
     fetchPokemon();
   }, [params.id]);
 
+  function handlePokemonClick() {
+    window.open(singlePokemon.pokedex);
+  }
+
   
 }
