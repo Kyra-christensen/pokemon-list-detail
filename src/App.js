@@ -8,7 +8,7 @@ import PokemonPage from './PokemonPage';
 import PokemonDetail from './PokemonDetail';
 
 
-function App() {
+export default function App() {
   return (
     <Router>
       <div className="App">
@@ -27,5 +27,3 @@ function App() {
     
   );
 }
-
-export default App;
