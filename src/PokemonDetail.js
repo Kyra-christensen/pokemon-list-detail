@@ -24,9 +24,9 @@ export default function PokemonDetail() {
     <>
       <Link to='/'>Home</Link>
       <div className='pokemon-detail' onClick={handlePokemonClick}>
+        <img className='pokemon-img' src={singlePokemon.url_image}/>
         <div className='pokemon-data'>
-          <img className='pokemon-img' src={singlePokemon.url_image}/>
-          <p>{singlePokemon.pokemon}</p>
+          <p>Name: {singlePokemon.pokemon}</p>
           <p>Height: {singlePokemon.height}</p>
           <p>weight: {singlePokemon.weight}</p>
           <p>Base XP: {singlePokemon.base_experience}</p>
@@ -43,7 +43,7 @@ export default function PokemonDetail() {
           <p>Egg Group(s): {singlePokemon.egg_group_1}, {singlePokemon.egg_group_2}</p>
           <p>Generation: {singlePokemon.generation_id}</p>
           <p>Evolves From Species Who&apos;s id is: {singlePokemon.evolves_from_species_id}</p>
-          <p>Evolution chain id: {singlePokemon.evolves_from_chain_id}</p>
+          <p>Evolution chain id: {singlePokemon.evolution_chain_id}</p>
           <p>Shape id: {singlePokemon.shape_id}</p>
           <p>Shape: {singlePokemon.shape}</p>
           <p>Pokebase: {singlePokemon.pokebase}</p>

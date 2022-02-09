@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 function App() {
   const [pokemonArray, setPokemonArray] = useState([]);
   const [page, setPage] = useState(1);
-  const perPage = 100;
+  const perPage = 12;
 
   useEffect(() => {
     async function fetch() {
